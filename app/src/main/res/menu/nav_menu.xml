@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/group1"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_sports"
+            android:icon="@drawable/ic_sports"
+            android:title="@string/sports">
+
+        </item>
+        <item
+            android:id="@+id/nav_headline"
+            android:icon="@drawable/ic_baseline_policy_24"
+            android:title="@string/top_headlines">
+
+        </item>
+        <item
+            android:id="@+id/nav_hindi"
+            android:icon="@drawable/ic_baseline_place_24"
+
+            android:title="@string/hindi_news">
+
+        </item>
+
+        <item
+            android:id="@+id/nav_tech"
+            android:icon="@drawable/ic_outline_brightness_medium_24"
+
+            android:title="@string/tech_crunch">
+
+        </item>
+        <item
+            android:id="@+id/nav_global"
+            android:icon="@drawable/ic_baseline_language_24"
+
+            android:title="@string/global_news">
+
+        </item>
+        <item
+            android:id="@+id/nav_entertainment"
+            android:icon="@drawable/ic_baseline_queue_music_24"
+
+
+            android:title="@string/entertainment">
+
+        </item>
+    </group>
+    <group>
+        <item
+            android:id="@+id/nav_share"
+            android:icon="@drawable/ic_baseline_share_24"
+            android:title="@string/share">
+
+        </item>
+    </group>
+    <group android:id="@+id/group2">
+        <item
+            android:id="@+id/nav_info"
+            android:icon="@drawable/ic_baseline_info_24"
+            android:title="@string/developer_info">
+
+        </item>
+    </group>
+
+</menu>

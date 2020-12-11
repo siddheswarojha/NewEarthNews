@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">NewEarthNews</string>
+    <string name="todo">ignore</string>
+    <string name="textview">txt</string>
+    <string name="the_news_app">NewEarthNews</string>
+    <string name="sports">Sports</string>
+    <string name="top_headlines">Top Headlines</string>
+    <string name="hindi_news">Hindi News</string>
+    <string name="tech_crunch">Tech Crunch</string>
+    <string name="global_news">Global news</string>
+    <string name="entertainment">Entertainment</string>
+    <string name="share">share</string>
+    <string name="about_us">About us</string>
+    <string name="developer_info">Developer Info</string>
+    <string name="username">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="get_otp">Get OTP</string>
+    <string name="already_registered_let_s_login">Already Registered! Let\'s LOGIN</string>
+    <string name="signup_now">SignUp Now</string>
+    <string name="register">Register</string>
+    <string name="powered_by_android">Powered by android</string>
+</resources>

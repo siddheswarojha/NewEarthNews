@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "843096923445",
+    "firebase_url": "https://newearth-news.firebaseio.com",
+    "project_id": "newearth-news",
+    "storage_bucket": "newearth-news.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:843096923445:android:f07ed697eefc71990a007c",
+        "android_client_info": {
+          "package_name": "com.siddheswar.news"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "843096923445-qq15kitlts3n82ecb6m7h1fc95feir45.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.siddheswar.news",
+            "certificate_hash": "920a41e229877045d7fb5f9634c8ae535bd26c52"
+          }
+        },
+        {
+          "client_id": "843096923445-5q0n0e7kun3qb7j2aqck0vch20djqkrr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_27nz-ypEsPq1oJasU_98U7z900OJVkU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "843096923445-5q0n0e7kun3qb7j2aqck0vch20djqkrr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
