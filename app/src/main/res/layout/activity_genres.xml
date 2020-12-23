@@ -1,35 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:fitsSystemWindows="true"
     android:id="@+id/drawer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     tools:context=".Genres">
 
 
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
 
-    <androidx.appcompat.widget.Toolbar
-    android:id="@+id/toolbar"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-        app:title="NewEarthNews"
-        app:titleTextColor="#FCFDFD"
-    android:background="#FF1E78"
-    android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-</androidx.appcompat.widget.Toolbar>
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FF1E78"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            app:title="NewEarthNews"
+            app:titleTextColor="#FCFDFD"></androidx.appcompat.widget.Toolbar>
 
 
+    </RelativeLayout>
 
-
-</RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -43,15 +39,15 @@
 
     </RelativeLayout>
 
-<com.google.android.material.navigation.NavigationView
-    android:id="@+id/navigaionView"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_gravity ="start"
-    app:menu="@menu/nav_menu"
-    app:headerLayout="@layout/header">
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigaionView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/nav_menu">
 
-</com.google.android.material.navigation.NavigationView>
+    </com.google.android.material.navigation.NavigationView>
 
 </androidx.drawerlayout.widget.DrawerLayout>
 

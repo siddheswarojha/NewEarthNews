@@ -28,7 +28,7 @@ import org.json.JSONObject;
 
 public class Genres extends AppCompatActivity {
 
-   NavigationView navigation;
+    NavigationView navigation;
     Toolbar toolbar;
     DrawerLayout drawerLayout;
     ActionBarDrawerToggle actionbartoggle;
@@ -45,69 +45,77 @@ public class Genres extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_genres);
 
-        setUptoolBar();
+        setUptoolBar(); //function for setting the toolbar and navigation drawer.
 
-        RecyclerViewGenre=findViewById(R.id.RecyclerViewGenre);
+        RecyclerViewGenre = findViewById(R.id.RecyclerViewGenre);
         RecyclerViewGenre.setLayoutManager(new LinearLayoutManager(this));
         title = new String[10];
         author = new String[10];
         sources = new String[10];
         links = new String[10];
         imagelinks = new String[10];
-        RecyclerViewGenre.setAdapter(new RecyclerAdapterGenre(title, author,sources, getApplicationContext(), links, imagelinks));
+        RecyclerViewGenre.setAdapter(new RecyclerAdapterGenre(title, author, sources, getApplicationContext(), links, imagelinks));
 
 
         navigation = findViewById(R.id.navigaionView);
+        /****
+         * *Logic for menu items when they are clicked.
+         * every intent carries a string and those string are received in the main activity.
+         *****/
         navigation.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
-                switch (item.getItemId())
-                {
+                switch (item.getItemId()) {
 
-                    case  R.id.nav_hindi:
+                    case R.id.nav_hindi:
                         Intent ihindi = new Intent(Genres.this, MainActivity.class);
-                        ihindi.putExtra("value","hindi");
+                        ihindi.putExtra("value", "hindi");
                         startActivity(ihindi);
                         break;
-                    case  R.id.nav_headline:
+                    case R.id.nav_headline:
                         Intent itop = new Intent(Genres.this, MainActivity.class);
-                        itop.putExtra("value","top");
+                        itop.putExtra("value", "top");
                         startActivity(itop);
                         break;
-                    case  R.id.nav_tech:
+                    case R.id.nav_tech:
                         Intent itech = new Intent(Genres.this, MainActivity.class);
-                        itech.putExtra("value","tech");
+                        itech.putExtra("value", "tech");
                         startActivity(itech);
                         break;
-                    case  R.id.nav_entertainment:
+                    case R.id.nav_entertainment:
                         Intent ibollywood = new Intent(Genres.this, MainActivity.class);
-                        ibollywood.putExtra("value","bollywood");
+                        ibollywood.putExtra("value", "bollywood");
                         startActivity(ibollywood);
                         break;
-                    case  R.id.nav_global:
+                    case R.id.nav_global:
                         Intent iglobal = new Intent(Genres.this, MainActivity.class);
-                        iglobal.putExtra("value","global");
+                        iglobal.putExtra("value", "global");
                         startActivity(iglobal);
                         break;
-                    case  R.id.nav_sports:
+                    case R.id.nav_sports:
                         Intent isports = new Intent(Genres.this, MainActivity.class);
-                        isports.putExtra("value","sports");
+                        isports.putExtra("value", "sports");
                         startActivity(isports);
-                        break;   case  R.id.nav_share:
-                            Intent ishare = new Intent();
-                            ishare.setAction(Intent.ACTION_SEND);
-                    ishare.setType("text/plain");
-                            startActivity(ishare);
+                        break;
+                    case R.id.nav_share:
+                        Intent ishare = new Intent();
+                        ishare.setAction(Intent.ACTION_SEND);
+                        ishare.setType("text/plain");
+                        startActivity(ishare);
 
-                    break;
-                    case  R.id.nav_info:
-                        Toast.makeText(Genres.this, "Developed by Siddheswar Ojha",Toast.LENGTH_LONG).show();
+                        break;
+                    case R.id.nav_info:
+                        Toast.makeText(Genres.this, "Developed by Siddheswar Ojha", Toast.LENGTH_LONG).show();
                         break;
                 }
                 return true;
             }
         });
+        /**
+         *  Volley Request for default news in this activity
+         *
+         */
         RequestQueue requestQueue;
         requestQueue = Volley.newRequestQueue(this);
 
@@ -119,16 +127,15 @@ public class Genres extends AppCompatActivity {
                 try {
                     JSONArray jsonArray = response.getJSONArray("articles");
 
-                    for(int i=0; i<jsonArray.length(); i++)
-                    {
+                    for (int i = 0; i < jsonArray.length(); i++) {
                         JSONObject jo = jsonArray.getJSONObject(i);
-                        title[i]=jo.getString("title");
+                        title[i] = jo.getString("title");
 
-                        author[i]="Time : "+ jo.getString("publishedAt");
+                        author[i] = "Time : " + jo.getString("publishedAt");
                         JSONObject jo1 = jo.getJSONObject("source");
-                        sources[i]="Sources : " + jo1.getString("name");
-                        links[i]=jo.getString("url");
-                        imagelinks[i]=jo.getString("image");
+                        sources[i] = "Sources : " + jo1.getString("name");
+                        links[i] = jo.getString("url");
+                        imagelinks[i] = jo.getString("image");
 
 
                     }
@@ -138,8 +145,6 @@ public class Genres extends AppCompatActivity {
                 }
 
             }
-
-
 
 
         }, new Response.ErrorListener() {
@@ -154,22 +159,19 @@ public class Genres extends AppCompatActivity {
         requestQueue.add(jsonObjectRequest);
 
 
-
-
-
     }
 
+    // Setup tool bar function
     private void setUptoolBar() {
         drawerLayout = findViewById(R.id.drawer);
         toolbar = findViewById(R.id.toolbar);
 
-        actionbartoggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.app_name,R.string.app_name);
-drawerLayout.addDrawerListener(actionbartoggle);
-actionbartoggle.syncState();
+        actionbartoggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.app_name, R.string.app_name);
+        drawerLayout.addDrawerListener(actionbartoggle);
+        actionbartoggle.syncState();
 
 
     }
-
 
 
 }

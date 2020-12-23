@@ -15,21 +15,25 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.squareup.picasso.Picasso;
 
+/*******************************
+ Recycler adapter for the recycler view in the main activity.
+ the list_item_sample is the design for the adapter used in oncreate method.
+ ******************************/
+
 
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.RecylerviewHolder> {
 
-   private String[] data;
-   private String[] data2;
-   private String[] data3;
-   private String[] data4;
-   private String[] data5;
+    private String[] data;
+    private String[] data2;
+    private String[] data3;
+    private String[] data4;
+    private String[] data5;
 
-     Context context;
+    Context context;
 
 
-    public RecyclerAdapter(String[] data, String[] data2, String[] data3, Context context, String[] data4, String[] data5)
-    {
-        this.data= data;
+    public RecyclerAdapter(String[] data, String[] data2, String[] data3, Context context, String[] data4, String[] data5) {
+        this.data = data;
         this.data2 = data2;
         this.data3 = data3;
         this.context = context;
@@ -37,11 +41,12 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recyle
         this.data5 = data5;
 
     }
+
     @NonNull
     @Override
     public RecylerviewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        View view = inflater.inflate(R.layout.list_item_sample,parent,false);
+        View view = inflater.inflate(R.layout.list_item_sample, parent, false);
 
         return new RecylerviewHolder(view);
     }
@@ -61,12 +66,17 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recyle
         holder.txt2.setText(author);
         holder.txt3.setText(sources);
         holder.txt4.setText(link);
+
+        /***
+         * onclick logic for each news
+         * here an intent carries the url and web view it using the webnewsportal activity
+         */
         holder.card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String s = holder.txt4.getText().toString();
                 Intent i = new Intent(context, WebNewsPortal.class);
-                i.putExtra("urlvalue",s);
+                i.putExtra("urlvalue", s);
                 i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(i);
 
@@ -75,22 +85,25 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recyle
 
 
     }
+
     @Override
     public int getItemCount() {
         return data.length;
     }
-    public class RecylerviewHolder extends RecyclerView.ViewHolder{
-        TextView txt1,txt2,txt3,txt4;
+
+    public class RecylerviewHolder extends RecyclerView.ViewHolder {
+        TextView txt1, txt2, txt3, txt4;
         ImageView img;
         CardView card;
+
         public RecylerviewHolder(@NonNull View itemView) {
             super(itemView);
-           txt1 = itemView.findViewById(R.id.txt1);
-           img =  itemView.findViewById(R.id.imgViewSample);
-           txt2 = itemView.findViewById(R.id.txt2);
-           txt3 = itemView.findViewById(R.id.txt3);
-           txt4 = itemView.findViewById(R.id.txt4);
-           card = itemView.findViewById(R.id.cardNews);
+            txt1 = itemView.findViewById(R.id.txt1);
+            img = itemView.findViewById(R.id.imgViewSample);
+            txt2 = itemView.findViewById(R.id.txt2);
+            txt3 = itemView.findViewById(R.id.txt3);
+            txt4 = itemView.findViewById(R.id.txt4);
+            card = itemView.findViewById(R.id.cardNews);
         }
     }
 }

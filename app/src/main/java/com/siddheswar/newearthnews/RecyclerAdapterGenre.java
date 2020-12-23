@@ -20,31 +20,26 @@ public class RecyclerAdapterGenre extends RecyclerView.Adapter<RecyclerAdapterGe
     String[] author;
     String[] links;
     String[] imageurl;
-    String [] source;
+    String[] source;
     Context contextGenre;
 
 
-
-
-    public RecyclerAdapterGenre(String[] title, String[] author,  String[] source, Context contextGenre, String[] links, String[] imageurl )
-    {
-        this.title=title;
-        this.author=author;
-        this.links=links;
-        this.imageurl=imageurl;
-        this.contextGenre=contextGenre;
-        this.source =source;
+    public RecyclerAdapterGenre(String[] title, String[] author, String[] source, Context contextGenre, String[] links, String[] imageurl) {
+        this.title = title;
+        this.author = author;
+        this.links = links;
+        this.imageurl = imageurl;
+        this.contextGenre = contextGenre;
+        this.source = source;
 
     }
-
-
 
 
     @NonNull
     @Override
     public GenreViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        View view = inflater.inflate(R.layout.list_item_sample,parent,false);
+        View view = inflater.inflate(R.layout.list_item_sample, parent, false);
 
         return new GenreViewHolder(view);
     }
@@ -70,15 +65,11 @@ public class RecyclerAdapterGenre extends RecyclerView.Adapter<RecyclerAdapterGe
             public void onClick(View v) {
                 String s = holder.txt4.getText().toString();
                 Intent i = new Intent(contextGenre, WebNewsPortal.class);
-                i.putExtra("urlvalue",s);
+                i.putExtra("urlvalue", s);
                 i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 contextGenre.startActivity(i);
             }
         });
-
-
-
-
 
 
     }
@@ -88,17 +79,16 @@ public class RecyclerAdapterGenre extends RecyclerView.Adapter<RecyclerAdapterGe
         return title.length;
     }
 
-    public class GenreViewHolder extends RecyclerView.ViewHolder{
-        TextView txt1,txt2,txt3,txt4;
+    public class GenreViewHolder extends RecyclerView.ViewHolder {
+        TextView txt1, txt2, txt3, txt4;
         ImageView img;
         CardView card;
-
 
 
         public GenreViewHolder(@NonNull View itemView) {
             super(itemView);
             txt1 = itemView.findViewById(R.id.txt1);
-            img =  itemView.findViewById(R.id.imgViewSample);
+            img = itemView.findViewById(R.id.imgViewSample);
             txt2 = itemView.findViewById(R.id.txt2);
             txt3 = itemView.findViewById(R.id.txt3);
             txt4 = itemView.findViewById(R.id.txt4);

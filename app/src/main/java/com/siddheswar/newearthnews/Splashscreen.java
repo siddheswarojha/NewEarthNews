@@ -17,32 +17,39 @@ public class Splashscreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splashscreen);
-        progressBar = (ProgressBar)findViewById(R.id.spin_kit1);
-        Sprite doubleBounce = new ThreeBounce();
+        progressBar = (ProgressBar) findViewById(R.id.spin_kit1);
+        Sprite doubleBounce = new ThreeBounce();   // Object for Sprite class for progressbar.
         progressBar.setIndeterminateDrawable(doubleBounce);
-
-        Thread th = new Thread(){
+/*****
+ Object of thread class is used to access the method for Thread class
+ try/catch logics is used to pause the splash screen for 2000 millis sec.
+ *****/
+        Thread th = new Thread() {
             @Override
-    public void run() {
-        try {
-            sleep(2000);
-        }catch(Exception e)
-        {
-            e.printStackTrace();
-        }
-        finally {
-            Intent i = new Intent(Splashscreen.this, Login.class);
-            startActivity(i);
-        }
-        super.run();
-    }
-};
-        th.start();
+            public void run() {
+                try {
+                    sleep(2000);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                } finally {
+                    Intent i = new Intent(Splashscreen.this, Login.class);
+                    startActivity(i);
                 }
+                super.run();
+            }
+        };
+        th.start();
+    }
 
-@Override
-protected void onPause() {
+
+    /***
+     onPause is basically used to finish the activity when the application is in pause state
+     also this avoid crashing of app.
+     ***/
+
+    @Override
+    protected void onPause() {
         super.onPause();
         finish();
-        }
+    }
 }

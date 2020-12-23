@@ -48,6 +48,12 @@ public class Login extends AppCompatActivity {
                 Sprite doubleBounce = new CubeGrid();
                 progressBar.setIndeterminateDrawable(doubleBounce);
                 progressBar.setVisibility(View.VISIBLE);
+
+                /**
+                 * Login an already registered user into the application.
+                 * if the the credentials match it logs in else it throws
+                 * "Authentication Failed"
+                 */
                 String email = UserNameLogin.getText().toString();
                 String password = PasswordLogin.getText().toString();
                 mAuth.signInWithEmailAndPassword(email, password)
@@ -67,6 +73,9 @@ public class Login extends AppCompatActivity {
                         });
             }
         });
+
+
+        //gateway for signup activity from login activity
         gateway.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

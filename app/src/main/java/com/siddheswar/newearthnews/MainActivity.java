@@ -44,6 +44,10 @@ public class MainActivity extends AppCompatActivity {
         imagelinks = new String[10];
         Recycler.setAdapter(new RecyclerAdapter(title, author,sources,getApplicationContext(), links, imagelinks));
 
+        /***
+         * Intent received from genre activity.
+         * then under switch case logic different urls are assigned as per the message received
+         */
         Intent i =getIntent();
         String value = i.getStringExtra("value");
         String url = null;
@@ -84,9 +88,12 @@ public class MainActivity extends AppCompatActivity {
         }
         else
         {
-            Log.d("hi","eror");
+            Toast.makeText(this, "Something Unusual occured", Toast.LENGTH_SHORT).show();
         }
+/**
 
+ * Volley request formed for fetching the API and displaying it to the user.
+ */
 
         RequestQueue requestQueue;
         requestQueue = Volley.newRequestQueue(this);
@@ -125,7 +132,7 @@ public class MainActivity extends AppCompatActivity {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Log.d("Shubham", "Something went wrong");
+
                 Toast.makeText(MainActivity.this, "Something went wrong!", Toast.LENGTH_SHORT).show();
 
             }

@@ -20,9 +20,9 @@ public class WebNewsPortal extends AppCompatActivity {
         webView.setWebViewClient(new WebViewClient());
         webView.getSettings().setJavaScriptEnabled(Boolean.parseBoolean("true"));
         Intent intent = getIntent();
-        String url = intent.getStringExtra("urlvalue");
-         webView.loadUrl(url);
-        Log.d("vavava", url);
+        String url = intent.getStringExtra("urlvalue"); // recives the url value fr web viewing it.
+         webView.loadUrl(url);// loads the url
+
 
     }
 }
