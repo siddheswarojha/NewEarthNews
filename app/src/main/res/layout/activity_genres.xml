@@ -21,7 +21,9 @@
             android:background="#FF1E78"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             app:title="NewEarthNews"
-            app:titleTextColor="#FCFDFD"></androidx.appcompat.widget.Toolbar>
+            app:titleTextColor="#FCFDFD">
+
+        </androidx.appcompat.widget.Toolbar>
 
 
     </RelativeLayout>

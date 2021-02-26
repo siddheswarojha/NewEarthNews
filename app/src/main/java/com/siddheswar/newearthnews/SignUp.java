@@ -28,8 +28,8 @@ public class SignUp extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
         gatewaySignUp = findViewById(R.id.gatewaySignUp);
-        email = findViewById(R.id.EmailSignUp);
-        password = findViewById(R.id.PasswordSignUp);
+//        email = findViewById(R.id.EmailSignUp);
+//        password = findViewById(R.id.PasswordSignUp);
         signup = findViewById(R.id.btnOTP);
         gatewaySignUp.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -5,52 +5,97 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ECEDE8"
+    android:background="@color/colorWhite"
     tools:context="com.siddheswar.newearthnews.Login">
 
-    <EditText
-        android:id="@+id/EtUserName"
-        android:layout_width="233dp"
-        android:layout_height="52dp"
+<!--    <EditText-->
+<!--        android:id="@+id/EtUserName"-->
+<!--        android:layout_width="233dp"-->
+<!--        android:layout_height="52dp"-->
 
-        android:drawableStart="@drawable/ic_username_black"
-        android:hint="@string/username"
-        android:inputType="textEmailAddress"
-        android:padding="5dp"
-        android:textAlignment="center"
-        android:textColor="#E80505"
-        android:textColorHint="#E80505"
-        android:textSize="20sp"
+<!--        android:drawableStart="@drawable/ic_username_black"-->
+<!--        android:hint="@string/username"-->
+<!--        android:inputType="textEmailAddress"-->
+<!--        android:padding="5dp"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textColor="#E80505"-->
+<!--        android:textColorHint="#E80505"-->
+<!--        android:textSize="20sp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.402"-->
+<!--        android:autofillHints=""-->
+<!--        android:gravity="center_horizontal"-->
+<!--        android:drawableLeft="@drawable/ic_username_black" />-->
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="221dp"
+        android:layout_height="56dp"
+        android:background="@drawable/design"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.402"
-        android:autofillHints=""
-        android:gravity="center_horizontal"
-        android:drawableLeft="@drawable/ic_username_black" />
+        app:layout_constraintVertical_bias="0.381">
 
-    <EditText
-        android:id="@+id/EtPassword"
-        android:layout_width="233dp"
-        android:layout_height="52dp"
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="51dp"
+            android:drawableLeft="@drawable/ic_username_black"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/colorPrimary" />
 
-        android:drawableLeft="@drawable/ic_password"
-        android:hint="@string/password"
-        android:inputType="textPassword"
-        android:padding="5dp"
-        android:textAlignment="center"
-        android:textColor="#E80505"
-        android:textColorHint="#E80505"
-        android:textSize="20sp"
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+<!--    <EditText-->
+<!--        android:id="@+id/EtPassword"-->
+<!--        android:layout_width="233dp"-->
+<!--        android:layout_height="52dp"-->
+
+<!--        android:drawableLeft="@drawable/ic_password"-->
+<!--        android:hint="@string/password"-->
+<!--        android:inputType="textPassword"-->
+<!--        android:padding="5dp"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textColor="#E80505"-->
+<!--        android:textColorHint="#E80505"-->
+<!--        android:textSize="20sp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.513"-->
+<!--        android:autofillHints=""-->
+<!--        android:gravity="center_horizontal"-->
+<!--        android:drawableStart="@drawable/ic_password" />-->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="228dp"
+        android:layout_height="58dp"
+
+
+        android:background="@drawable/design"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.513"
-        android:autofillHints=""
-        android:gravity="center_horizontal"
-        android:drawableStart="@drawable/ic_password" />
+        app:layout_constraintVertical_bias="0.52">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="51dp"
+            android:drawableLeft="@drawable/ic_username_black"
+            android:hint="@string/password"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/colorPrimary" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <com.github.ybq.android.spinkit.SpinKitView
         android:id="@+id/spin_kit"
@@ -110,6 +155,7 @@
         app:layout_constraintVertical_bias="0.754" />
 
     <RelativeLayout
+        android:id="@+id/relativeLayout"
         android:layout_width="423dp"
         android:layout_height="153dp"
         app:layout_constraintBottom_toBottomOf="parent"
