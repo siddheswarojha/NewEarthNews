@@ -40,6 +40,8 @@ public class Genres extends AppCompatActivity {
     String[] imagelinks;
     String[] title;
 
+    int x=0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -141,7 +143,7 @@ public class Genres extends AppCompatActivity {
                     }
 
                 } catch (JSONException e) {
-                    e.printStackTrace();
+                    
                 }
 
             }
@@ -150,7 +152,7 @@ public class Genres extends AppCompatActivity {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Log.d("Shubham", "Something went wrong");
+
                 Toast.makeText(Genres.this, "Something went wrong!", Toast.LENGTH_SHORT).show();
 
             }
