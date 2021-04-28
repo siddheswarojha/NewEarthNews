@@ -46,6 +46,7 @@ public class Genres extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_genres);
+        Toast.makeText(this, "Scroll down to load news", Toast.LENGTH_SHORT).show();
 
         setUptoolBar(); //function for setting the toolbar and navigation drawer.
 
