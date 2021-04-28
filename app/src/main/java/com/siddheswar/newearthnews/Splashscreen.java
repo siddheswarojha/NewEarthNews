@@ -32,7 +32,7 @@ public class Splashscreen extends AppCompatActivity {
                 } catch (Exception e) {
                     e.printStackTrace();
                 } finally {
-                    Intent i = new Intent(Splashscreen.this, Login.class);
+                    Intent i = new Intent(Splashscreen.this, Genres.class);
                     startActivity(i);
                 }
                 super.run();
