@@ -17,15 +17,14 @@
         app:SpinKit_Color="#FF006F"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.53"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.771" />
+        app:layout_constraintVertical_bias="0.672" />
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="142dp"
-        android:layout_height="135dp"
+        android:layout_width="139dp"
+        android:layout_height="138dp"
         android:contentDescription="@string/todo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -39,31 +38,15 @@
         android:layout_width="406dp"
         android:layout_height="53dp"
         android:gravity="center_horizontal"
-        android:text="@string/powered_by_android"
+        android:text="@string/app_name"
         android:textAlignment="center"
         android:textColor="#E6016B"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.66" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-
-        android:layout_width="406dp"
-        android:layout_height="53dp"
-        android:gravity="center_horizontal"
-        android:text="New Earth News"
-        android:textAlignment="center"
-        android:textColor="#041CF1"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.536" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

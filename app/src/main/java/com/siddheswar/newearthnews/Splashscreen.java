@@ -8,6 +8,7 @@ import android.widget.ProgressBar;
 
 import com.github.ybq.android.spinkit.sprite.Sprite;
 import com.github.ybq.android.spinkit.style.CubeGrid;
+import com.github.ybq.android.spinkit.style.FadingCircle;
 import com.github.ybq.android.spinkit.style.ThreeBounce;
 
 public class Splashscreen extends AppCompatActivity {
@@ -20,8 +21,8 @@ public class Splashscreen extends AppCompatActivity {
         progressBar = (ProgressBar) findViewById(R.id.spin_kit1);
 
 
-        Sprite doubleBounce = new ThreeBounce();   // Object for Sprite class for progressbar.
-        progressBar.setIndeterminateDrawable(doubleBounce);
+        Sprite FadingCircle = new FadingCircle();   // Object for Sprite class for progressbar.
+        progressBar.setIndeterminateDrawable(FadingCircle);
 /*****
  Object of thread class is used to access the method for Thread class
  try/catch logics is used to pause the splash screen for 2000 millis sec.
@@ -30,7 +31,7 @@ public class Splashscreen extends AppCompatActivity {
             @Override
             public void run() {
                 try {
-                    sleep(2000);
+                    sleep(5000);
                 } catch (Exception e) {
                     e.printStackTrace();
                 } finally {
