@@ -19,7 +19,7 @@ public class Splashscreen extends AppCompatActivity {
         setContentView(R.layout.activity_splashscreen);
         progressBar = (ProgressBar) findViewById(R.id.spin_kit1);
 
-        
+
         Sprite doubleBounce = new ThreeBounce();   // Object for Sprite class for progressbar.
         progressBar.setIndeterminateDrawable(doubleBounce);
 /*****
