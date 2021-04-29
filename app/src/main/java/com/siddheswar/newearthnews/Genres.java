@@ -113,7 +113,7 @@ public class Genres extends AppCompatActivity {
                         Toast.makeText(Genres.this, "Developed by Siddheswar Ojha", Toast.LENGTH_LONG).show();
                         break;
                 }
-                return true;
+                return false;
             }
         });
         /**
