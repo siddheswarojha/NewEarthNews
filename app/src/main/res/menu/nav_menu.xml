@@ -4,6 +4,17 @@
     <group
         android:id="@+id/group1"
         android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_headline"
+            android:icon="@drawable/ic_baseline_policy_24"
+            android:title="@string/top_headlines">
+
+        </item>
+        <item
+            android:id="@+id/nav_global"
+            android:icon="@drawable/ic_baseline_language_24"
+
+            android:title="@string/global_news">
 
         <item
             android:id="@+id/nav_sports"
@@ -11,12 +22,7 @@
             android:title="@string/sports">
 
         </item>
-        <item
-            android:id="@+id/nav_headline"
-            android:icon="@drawable/ic_baseline_policy_24"
-            android:title="@string/top_headlines">
 
-        </item>
         <item
             android:id="@+id/nav_hindi"
             android:icon="@drawable/ic_baseline_place_24"
@@ -32,11 +38,7 @@
             android:title="@string/tech_crunch">
 
         </item>
-        <item
-            android:id="@+id/nav_global"
-            android:icon="@drawable/ic_baseline_language_24"
 
-            android:title="@string/global_news">
 
         </item>
         <item
