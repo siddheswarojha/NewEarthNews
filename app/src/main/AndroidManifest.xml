@@ -6,9 +6,9 @@
 
     <application
 
-        android:icon="@drawable/newslogo"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/newslogo"
+        android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Splashscreen">

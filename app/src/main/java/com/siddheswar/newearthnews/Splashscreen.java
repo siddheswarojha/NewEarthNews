@@ -19,6 +19,7 @@ public class Splashscreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splashscreen);
         progressBar = (ProgressBar) findViewById(R.id.spin_kit1);
+        getSupportActionBar().hide();
 
 
         Sprite FadingCircle = new FadingCircle();   // Object for Sprite class for progressbar.
@@ -52,7 +53,9 @@ public class Splashscreen extends AppCompatActivity {
 
     @Override
     protected void onPause() {
+
         super.onPause();
         finish();
+        getSupportActionBar().show();
     }
 }
