@@ -34,6 +34,7 @@ public class Genres extends AppCompatActivity {
     ActionBarDrawerToggle actionbartoggle;
     RecyclerView RecyclerViewGenre;
 
+
     String[] author;
     String[] sources;
     String[] links;
